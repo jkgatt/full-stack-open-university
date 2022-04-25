@@ -1,0 +1,20 @@
+title Exercise 0.6: Single Page App New Note
+
+note over user:
+user inputs data into the text field
+end note
+
+user->browser: Clicks the Submit Button
+note over browser:
+browser starts executing js-code
+that send request to add note to server 
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server:
+server adds the new note to list
+end note
+server-->browser: Status Code: 201 created
+
+note over browser:
+Event handlers renders note to the page.
+end note
