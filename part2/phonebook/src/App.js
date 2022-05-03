@@ -1,19 +1,25 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Persons from './components/Persons';
 import Filter from './components/Filter';
 import PersonForm from './components/PersonForm';
+import axios from 'axios'
 
 const App = () => {
-  const [persons, setPersons] = useState([
-    {id: 1, name: 'Jean Gatt', number: '99889966'},
-    {id: 2, name: 'Ada Lovelace', number: '39-44-5323523'}
-  ])
+  const [persons, setPersons] = useState([])
 
   const [newName, setNewName] = useState('')
 
   const [newNumber, setNewNumber] = useState('')
 
   const [filter, setFilter] = useState('')
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/persons")
+      .then(response => {
+        setPersons(response.data)
+      })
+  })
 
   const submitToPhoneBook = (event) => {
     event.preventDefault()
