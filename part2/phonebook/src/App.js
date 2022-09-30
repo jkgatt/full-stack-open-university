@@ -65,7 +65,7 @@ const App = () => {
       phonebookServices
         .remove(contact.id)
         .then((response) => {
-          if (response.status === 200) {
+          if (response.status === 204) {
             setPersons(persons.filter((person) => contact.id !== person.id));
           }
         })

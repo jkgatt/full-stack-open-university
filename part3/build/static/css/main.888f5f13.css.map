@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.888f5f13.css","mappings":"AAAA,SACE,sBACF,CAEA,OACE,oBACF","sources":["index.css"],"sourcesContent":[".success {\n  border: 2px solid green;\n}\n\n.error {\n  border: 2px solid red;\n}"],"names":[],"sourceRoot":""}
