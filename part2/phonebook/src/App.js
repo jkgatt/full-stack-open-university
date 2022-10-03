@@ -54,6 +54,9 @@ const App = () => {
       phonebookServices.create(person).then((newContact) => {
         setPersons(persons.concat(newContact));
         addTempMessage(`Added New Contact: ${newContact.name}`);
+      }).catch(error => {
+        console.log(error);
+        addTempMessage(error.response.data.error, true);
       });
     }
     setNewName("");

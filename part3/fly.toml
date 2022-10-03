@@ -1,6 +1,6 @@
-# fly.toml file generated for phonebook-open-uni on 2022-09-30T18:01:59+02:00
+# fly.toml file generated for solitary-pond-9783 on 2022-10-03T21:34:40+02:00
 
-app = "phonebook-open-uni"
+app = "solitary-pond-9783"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
